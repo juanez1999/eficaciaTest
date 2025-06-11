@@ -1,0 +1,51 @@
+<section class="main-section">
+	<div class="container">
+		<storybook-header-momentos
+			[title]="'Crear una medición'"
+			[subtitle]="'Permita de nuevas mediciones de participación'"
+			[content]="
+				'Es el proceso de evaluar cuán involucradas están las personas en una actividad, usando indicadores como asistencia, interacciones o aportes. Se recogen datos, se analizan y se obtiene un resultado que ayuda a mejorar el compromiso y la estrategia.'
+			"
+			[fullWidth]="true"
+		/>
+		<app-input
+			[label]="'Nombre de la medición'"
+			[placeholder]="'Inserte el nombre'"
+			[type]="'textField'"
+			[state]="'enable'"
+			[showRequired]="true"
+		/>
+		<app-input
+			[label]="'Descripción de la medición'"
+			[placeholder]="'Inserte comentarios u observaciones'"
+			[type]="'multiline'"
+			[state]="'enable'"
+			class="form-control"
+		/>
+		<app-dropdown-menu
+			[state]="'Estado'"
+			[textField]="'Estado'"
+			[options]="['Activo', 'Inactivo']"
+			class="form-control"
+		/>
+		<storybook-checkbox-text [label]="'Implementación obligatoria'" class="form-control" />
+		<p>Configuración especial</p>
+		<app-button
+			[label]="'Crear medición'"
+			[width]="'100%'"
+			[size]="'medium'"
+			[color]="'primary'"
+			[styles]="'filled'"
+			class="form-control"
+			[state]="'active'"
+		/>
+		<app-button
+			[label]="'Cancelar creación'"
+			[width]="'100%'"
+			[size]="'medium'"
+			[color]="'error'"
+			[styles]="'text'"
+			[state]="'active'"
+		/>
+	</div>
+</section>
